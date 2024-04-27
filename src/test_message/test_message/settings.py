@@ -52,7 +52,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'test_message.urls'
 
-print(os.path.join(os.path.abspath(__file__), "..", "..", "..", "templates"))
 
 TEMPLATES = [
     {
