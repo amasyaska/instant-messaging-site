@@ -1,3 +1,4 @@
+import os
 """
 Django settings for test_message project.
 
@@ -51,10 +52,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'test_message.urls'
 
+print(os.path.join(os.path.abspath(__file__), "..", "..", "..", "templates"))
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(os.path.abspath(__file__), "..", "..", "..", "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
